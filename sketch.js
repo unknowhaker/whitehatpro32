@@ -9,51 +9,52 @@ function setup() {
     engine = Engine.create();
     world = engine.world;
     //1075,725,975,625
-    ground = new Ground(600,680,1200,10);
+   ground = new Ground(600,680,1200,10);
     stand = new Ground(900,600,350,10);
     stand1 = new Ground(1000,300,350,10);
-    ub1 = new Box(850,250,50,50);
-    ub2 = new Box(900,250,50,50);
-    ub3 = new Box(950,250,50,50);
-    ub4 = new Box(1000,250,50,50);
-    ub5 = new Box(1050,250,50,50);
-    ub6 = new Box(1100,250,50,50);
-    ub7 = new Box(1150,250,50,50);
-    ub8 = new Box(900,200,50,50);
-    ub9 = new Box(950,200,50,50);
-    ub10 = new Box(1000,200,50,50);
-    ub11 = new Box(1050,200,50,50);
-    ub12 = new Box(1100,200,50,50);
-    ub13 = new Box(950,150,50,50);
-    ub14 = new Box(1000,150,50,50);
-    ub15 = new Box(1050,150,50,50);
-    ub16 = new Box(1000,100,50,50);
+    
+    ub1 = new Box(850,260,50,50);
+    ub2 = new Box(900,260,50,50);
+    ub3 = new Box(950,260,50,50);
+    ub4 = new Box(1000,260,50,50);
+    ub5 = new Box(1050,260,50,50);
+    ub6 = new Box(1100,260,50,50);
+    ub7 = new Box(1150,260,50,50);
+    ub8 = new Box(900,210,50,50);
+    ub9 = new Box(950,210,50,50);
+    ub10 = new Box(1000,210,50,50);
+    ub11 = new Box(1050,210,50,50);
+    ub12 = new Box(1100,210,50,50);
+    ub13 = new Box(950,160,50,50);
+    ub14 = new Box(1000,160,50,50);
+    ub15 = new Box(1050,160,50,50);
+    ub16 = new Box(1000,110,50,50);
+    
+  
     box1 = new Box(750,560,50,50);
-    box2 = new Box(800,500,50,50);
-    box3 = new Box(850,500,50,50);
-    box4 = new Box(900,500,50,50);
-    box5 = new Box(950,500,50,50);
-    box6 = new Box(1000,500,50,50);
+    box2 = new Box(800,510,50,50);
+    box3 = new Box(850,510,50,50);
+    box4 = new Box(900,510,50,50);
+    box5 = new Box(950,510,50,50);
+    box6 = new Box(1000,510,50,50);
     box7 = new Box(1050,560,50,50);
     box8 = new Box(800,560,50,50);
     box9 = new Box(850,560,50,50);
     box10 = new Box(900,560,50,50);
     box11 = new Box(950,560,50,50);
     box12 = new Box(1000,560,50,50);
-    box13 = new Box(850,410,50,50);
-    box14 = new Box(900,410,50,50);
-    box15 = new Box(950,410,50,50);
-    box16 = new Box(900,340,50,50);
+    box13 = new Box(850,460,50,50);
+    box14 = new Box(900,460,50,50);
+    box15 = new Box(950,460,50,50);
+    box16 = new Box(900,420,50,50);
+    
     poli = new Poligon(50,200,20);
     //slingShot = new SlingShot(this.poli,{x:100,y:200});
     slingShot = new SlingShot(poli.body,{x:100,y:200});
-    
-
 }
   
 function draw() {
     background(220);
-    text("SCORE "+score,750,40);
     Engine.update(engine);
     ground.display();
     stand.display();
@@ -86,6 +87,12 @@ function draw() {
     ub8.display();
     ub9.display();
     ub10.display();
+    ub11.display();
+    ub12.display();
+    ub13.display();
+    ub14.display();
+    ub15.display();
+    ub16.display();
 }
 function mouseDragged (){
     Matter.Body.setPosition(poli.body,{x:mouseX,y:mouseY});
